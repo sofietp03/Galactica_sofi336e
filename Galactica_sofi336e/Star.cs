@@ -6,19 +6,18 @@ using System.Threading.Tasks;
 
 namespace Galactica_sofi336e
 {
+    enum Startype { YellowDwarf, White, BlueNeutron, RedGiant }
     internal class Star : SpaceObjects
     {
 
 
-        public Startype  startype {get; set;}
+        public Startype Type { get; set; }
         int Temperatur { get; set; }
 
-        List<string> Planet { get; set; }
+       public List<Planet>? PlanetList { get; set; }
 
-        public string Sun { get; set; }
-        
+        public override Position? Pos { get; set; } = new Position() { X = 0, Y = 0 };
+
     }
-    enum PlaneType {Terrestial,Giant,Dwarf,Gas_Giant}
-
 
 }
